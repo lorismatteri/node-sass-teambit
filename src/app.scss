@@ -1,5 +1,125 @@
+$bg_bisque: bisque;
+/* /Variabili */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    color: #58402C;
+}
+
+/* Utility */
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/*** Header ***/
+
+/* Nav */
+.navbar {
+    align-items: center;
+    border-bottom: 1px solid #58402C;
+    padding: 2rem 0;
+}
+
+.nav_left, .nav_right {
+    flex-basis: 50%;
+}
+
+.nav_right {
+    text-align: right;
+}
+
+.nav_right ul {
+    list-style: none;
+}
+
+.nav_right ul li {
+    display: inline;
+    padding: 1.5rem;
+}
+
+/* Banner */
+#banner {
+    height: 400px;
+}
+
+#banner >div.container {
+    align-items: center;
+    height: 100%;
+}
+
+.banner_right, .banner_left {
+    height: 100%;
+    flex-basis: 50%;
+    border: 3px solid black;
+}
+
+.banner_right i {
+    font-size: 20rem;
+}
+
+/*** Main ***/
+/* Comparison */
+#comparison {
+    background-color: $bg_bisque;
+}
+
+.comparison_top, .comparison_bottom {
+    flex-direction: column;
+}
+
+.card {
+    flex-basis: calc(100% / 3)
+}
+
+.image {
+    justify-content: center;
+    align-items: center;
+}
+
+.image i {
+    font-size: 25rem;
+}
+
+/* Feature */
+.feature_odd, .feature_even {
+    width: 100%;
+}
+
+.feature_image, .feature_text {
+    flex-basis: 50%;
+}
+
+.feature_image i {
+    font-size: 25rem;
+}
+
+.feature_text > i {
+    display: block;
+    font-size: 17.5rem;
+    color: yellow;
+}
+
+/* Get Started */
+#get_started {
+    background-color: $bg_bisque;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#letter {
+   width: 33.33%;
+   background-color: aliceblue;
+   padding: 1rem;
+   border: 1px solid #2C4792;
+   border-radius: 1rem;
 }
