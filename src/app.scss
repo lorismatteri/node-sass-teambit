@@ -24,6 +24,10 @@ body {
     display: flex;
 }
 
+.p_small {
+    font-size: 1rem;
+    padding: 1rem 0;
+}
 /* Mixins */
 @mixin btn {
     background-color: transparent;
@@ -32,6 +36,13 @@ body {
     border: 1px solid $sec_color;
     border-radius: 5px;
     font-weight: bold;
+    max-width: 15%;
+}
+
+@mixin btn_blue {
+    background-color: $sec_color;
+    color: white;
+    max-width: 30%;
 }
 
 /*** Header ***/
@@ -56,7 +67,7 @@ body {
             };
             button {
                 @include btn;
-                width: 15%;
+                max-width: 15%;
                 font-size: 1rem;
                 img {
                     width: 15%;
@@ -84,7 +95,7 @@ body {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: bisque;
+    background-color: $bg_bisque;
     text-align: right;
     padding: 1rem;
     ul {
@@ -100,10 +111,7 @@ body {
             img {
                 width: 25%;
                 vertical-align: middle;
-            }
-            a {
-                color: $sec_color;
-                text-decoration: none;
+                cursor: pointer;
             }
         }
     }
@@ -111,22 +119,49 @@ body {
 
 /* Banner */
 #banner {
-    height: 400px;
     div.container {
-        align-items: center;
-        height: 100%;
+        padding: 2.5rem 0;
     }
 }
 
 
 .banner_right, .banner_left {
-    height: 100%;
     flex-basis: 50%;
-    border: 3px solid black;
 }
 
-.banner_right i {
-    font-size: 20rem;
+.banner_left {
+    h1 {
+        font-size: 4.75rem;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+    p:not(.p_small) {
+        padding: 1rem 0;
+        font-size: 2.25rem;
+        line-height: 1.5;
+    }
+    button {
+        @include btn;
+        @include btn_blue;
+        img {
+            width: 10%;
+            vertical-align: middle;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+    a {
+        color: $main_color;
+        text-decoration: none;
+    }
+}
+
+.banner_right {
+    img {
+        width: 100%;
+    }
 }
 
 /*** Main ***/
@@ -205,7 +240,20 @@ body {
 }
 
 /* Media queries */
-@media screen and (max-width: 998px) {
+@media all and (max-width: 550px) {
+    #banner {
+        .container {
+            flex-wrap: wrap;
+        }
+        .banner_left, .banner_right {
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
+
+}
+
+@media all and (max-width: 998px) {
     .container {
         width: 100%;
     }
@@ -220,4 +268,15 @@ body {
         display: block;
     }
 
+    #banner {
+        .container {
+            flex-wrap: wrap;
+        }
+        .banner_left, .banner_right {
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
 }
+
+
