@@ -1,3 +1,4 @@
+/* Variabili */
 /* Common */
 * {
   margin: 0;
@@ -9,23 +10,6 @@
 body {
   color: #58402C;
   font-family: 'Roboto', sans-serif;
-}
-
-/* Utility */
-.container {
-  width: 85%;
-  margin: auto;
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.p_small {
-  font-size: 1rem;
-  padding: 1rem 0;
 }
 
 /* Mixins */
@@ -179,6 +163,23 @@ body {
 
 .banner_right img {
   width: 100%;
+}
+
+/* Utility */
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.p_small {
+  font-size: 1rem;
+  padding: 1rem 0;
 }
 
 /*** Main ***/

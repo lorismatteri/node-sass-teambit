@@ -1,0 +1,118 @@
+/*** Header ***/
+
+/* Nav */
+.navbar {
+    align-items: center;
+    border-bottom: 1px solid $main_color;
+    padding: 1.5rem 0;
+    position: relative;
+    .nav_left {
+        flex-basis: 15%;
+    }
+    .nav_right {
+        flex-basis: 85%;
+        text-align: right;
+        ul {
+            list-style: none;
+            li {
+                display: inline;
+                padding: 1.5rem;
+            };
+            button {
+                @include btn;
+                max-width: 15%;
+                font-size: 1rem;
+                img {
+                    width: 15%;
+                    vertical-align: middle;
+                }
+                a {
+                    color: $sec_color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+#hamburger {
+    display: none;
+    color: $main_color;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+#menu {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: $bg_bisque;
+    text-align: right;
+    padding: 1rem;
+    ul {
+        list-style: none;
+        li {
+            display: inline;
+            padding: 1.5rem;
+        };
+        button {
+            @include btn;
+            width: 15%;
+            font-size: 1rem;
+            img {
+                width: 25%;
+                vertical-align: middle;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* Banner */
+#banner {
+    div.container {
+        padding: 2.5rem 0;
+    }
+}
+
+
+.banner_right, .banner_left {
+    flex-basis: 50%;
+}
+
+.banner_left {
+    h1 {
+        font-size: 4.75rem;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+    p:not(.p_small) {
+        padding: 1rem 0;
+        font-size: 2.25rem;
+        line-height: 1.5;
+    }
+    button {
+        @include btn;
+        @include btn_blue;
+        img {
+            width: 10%;
+            vertical-align: middle;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+    a {
+        color: $main_color;
+        text-decoration: none;
+    }
+}
+
+.banner_right {
+    img {
+        width: 100%;
+    }
+}
