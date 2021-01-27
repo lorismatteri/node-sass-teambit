@@ -1,5 +1,8 @@
 $bg_bisque: bisque;
-/* /Variabili */
+$main_color: #58402C;
+$sec_color: #2C4792;
+
+/* Common */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +10,8 @@ $bg_bisque: bisque;
 }
 
 body {
-    color: #58402C;
+    color: $main_color;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Utility */
@@ -20,41 +24,60 @@ body {
     display: flex;
 }
 
+/* Mixins */
+@mixin btn {
+    background-color: transparent;
+    color: $sec_color;
+    padding: .5rem;
+    border: 1px solid $sec_color;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
 /*** Header ***/
 
 /* Nav */
 .navbar {
     align-items: center;
-    border-bottom: 1px solid #58402C;
-    padding: 2rem 0;
-}
-
-.nav_left, .nav_right {
-    flex-basis: 50%;
-}
-
-.nav_right {
-    text-align: right;
-}
-
-.nav_right ul {
-    list-style: none;
-}
-
-.nav_right ul li {
-    display: inline;
-    padding: 1.5rem;
+    border-bottom: 1px solid $main_color;
+    padding: 1.5rem 0;
+    .nav_left, .nav_right {
+        flex-basis: 50%;
+    }
+    .nav_right {
+        text-align: right;
+        ul {
+            list-style: none;
+            li {
+                display: inline;
+                padding: 1.5rem;
+            };
+            button {
+                @include btn;
+                width: 15%;
+                font-size: 1rem;
+                img {
+                    width: 25%;
+                    vertical-align: middle;
+                }
+                a {
+                    color: $sec_color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
 
 /* Banner */
 #banner {
     height: 400px;
+    div.container {
+        align-items: center;
+        height: 100%;
+    }
 }
 
-#banner >div.container {
-    align-items: center;
-    height: 100%;
-}
 
 .banner_right, .banner_left {
     height: 100%;
@@ -120,7 +143,7 @@ body {
    width: 33.33%;
    background-color: aliceblue;
    padding: 1rem;
-   border: 1px solid #2C4792;
+   border: 1px solid $sec_color;
    border-radius: 1rem;
 }
 
