@@ -22,23 +22,45 @@
 /* Comparison */
 #comparison {
     background-color: $bg_bisque;
+    h3 {
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        font-size: 2.75rem;
+        line-height: 1.5;
+        font-weight: 500;
+    }
 }
 
 .comparison_top, .comparison_bottom {
     flex-direction: column;
+    padding: 5rem 0;
+    .grid {
+        padding: 2.5rem 0;
+        .card {
+            flex-basis: calc(100% / 3);
+            text-align: center;
+            margin: 1.5rem;
+            img {
+                height: 215px;
+                padding-bottom: 2rem;
+            }
+        }
+    }
 }
 
-.card {
-    flex-basis: calc(100% / 3)
+.comparison_top {
+    border-bottom: 1px solid $main_color;
 }
+
 
 .image {
     justify-content: center;
     align-items: center;
-}
-
-.image i {
-    font-size: 25rem;
+    padding: 5rem 0;
+    img {
+        max-width: 100%;
+    }
 }
 
 /* Feature */
@@ -105,11 +127,22 @@
         }
     }
 
+    .comparison_top, .comparison_bottom {
+        .grid {
+            flex-wrap: wrap;
+            .card {
+                flex-basis: 100%;
+            }
+        }        
+    }
+
 }
 
 @media all and (max-width: 998px) {
-    .container {
-        width: 100%;
+    #site_header {
+        .container {
+            width: 100%;
+        }        
     }
 
     .navbar {
@@ -129,6 +162,25 @@
         .banner_left, .banner_right {
             flex-basis: 100%;
             text-align: center;
+        }
+    }
+
+    .comparison_top, .comparison_bottom {
+        .grid {
+            flex-wrap: wrap;
+            .card {
+                flex-basis: 100%;
+                img {
+                    max-width: 80%;
+                    height: auto;
+                }
+            }
+        }        
+    }
+
+    .image {
+        img {
+            max-width: 80%;
         }
     }
 }

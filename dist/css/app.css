@@ -188,16 +188,41 @@ body {
   background-color: bisque;
 }
 
+#comparison h3 {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  font-size: 2.75rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
 .comparison_top, .comparison_bottom {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 5rem 0;
 }
 
-.card {
+.comparison_top .grid, .comparison_bottom .grid {
+  padding: 2.5rem 0;
+}
+
+.comparison_top .grid .card, .comparison_bottom .grid .card {
   -ms-flex-preferred-size: calc(100% / 3);
       flex-basis: calc(100% / 3);
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.comparison_top .grid .card img, .comparison_bottom .grid .card img {
+  height: 215px;
+  padding-bottom: 2rem;
+}
+
+.comparison_top {
+  border-bottom: 1px solid #58402C;
 }
 
 .image {
@@ -207,10 +232,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 5rem 0;
 }
 
-.image i {
-  font-size: 25rem;
+.image img {
+  max-width: 100%;
 }
 
 /* Feature */
@@ -286,10 +312,18 @@ body {
         flex-basis: 100%;
     text-align: center;
   }
+  .comparison_top .grid, .comparison_bottom .grid {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .comparison_top .grid .card, .comparison_bottom .grid .card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 @media all and (max-width: 998px) {
-  .container {
+  #site_header .container {
     width: 100%;
   }
   .navbar {
@@ -309,6 +343,21 @@ body {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     text-align: center;
+  }
+  .comparison_top .grid, .comparison_bottom .grid {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .comparison_top .grid .card, .comparison_bottom .grid .card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .comparison_top .grid .card img, .comparison_bottom .grid .card img {
+    max-width: 80%;
+    height: auto;
+  }
+  .image img {
+    max-width: 80%;
   }
 }
 /*# sourceMappingURL=app.css.map */
