@@ -304,14 +304,89 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 5rem 0;
+}
+
+#get_started h2 {
+  font-size: 3.5rem;
+  width: 35%;
+  margin: auto;
+  line-height: 1.5;
+  text-align: center;
+}
+
+#get_started .btn_container {
+  text-align: center;
+}
+
+#get_started .btn_container p {
+  padding-top: 2rem;
+}
+
+#get_started .btn_container p a {
+  color: #58402C;
+  text-decoration: none;
+}
+
+#get_started button {
+  background-color: transparent;
+  color: #2C4792;
+  padding: .5rem;
+  border: 1px solid #2C4792;
+  border-radius: 5px;
+  font-weight: bold;
+  max-width: 15%;
+  background-color: #922C2C;
+  border: 1px solid #922C2C;
+  color: white;
+  max-width: 30%;
+}
+
+#get_started button img {
+  width: 10%;
+  vertical-align: middle;
+}
+
+#get_started button a {
+  color: white;
+  text-decoration: none;
 }
 
 #letter {
-  width: 33.33%;
+  width: 30%;
+  margin: 2rem;
   background-color: aliceblue;
   padding: 1rem;
   border: 1px solid #2C4792;
   border-radius: 1rem;
+}
+
+#letter p {
+  padding-bottom: 2rem;
+  font-size: 1.15rem;
+}
+
+#letter .p_color {
+  color: #2C4792;
+}
+
+#letter .credits {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#letter .credits img {
+  width: 15%;
+  margin-right: 1rem;
+}
+
+#letter .credits p {
+  padding-bottom: 0;
+}
+
+#letter .credits span p {
+  font-size: 0.9rem;
 }
 
 /*** Footer ***/
@@ -408,6 +483,9 @@ body {
   .feature_text img {
     width: 80%;
     margin: auto;
+  }
+  #letter {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=app.css.map */
