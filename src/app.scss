@@ -41,10 +41,12 @@ body {
     align-items: center;
     border-bottom: 1px solid $main_color;
     padding: 1.5rem 0;
-    .nav_left, .nav_right {
-        flex-basis: 50%;
+    position: relative;
+    .nav_left {
+        flex-basis: 15%;
     }
     .nav_right {
+        flex-basis: 85%;
         text-align: right;
         ul {
             list-style: none;
@@ -57,13 +59,51 @@ body {
                 width: 15%;
                 font-size: 1rem;
                 img {
-                    width: 25%;
+                    width: 15%;
                     vertical-align: middle;
                 }
                 a {
                     color: $sec_color;
                     text-decoration: none;
                 }
+            }
+        }
+    }
+}
+
+#hamburger {
+    display: none;
+    color: $main_color;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+#menu {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: bisque;
+    text-align: right;
+    padding: 1rem;
+    ul {
+        list-style: none;
+        li {
+            display: inline;
+            padding: 1.5rem;
+        };
+        button {
+            @include btn;
+            width: 15%;
+            font-size: 1rem;
+            img {
+                width: 25%;
+                vertical-align: middle;
+            }
+            a {
+                color: $sec_color;
+                text-decoration: none;
             }
         }
     }
@@ -162,4 +202,22 @@ body {
 
 #site_footer ul li {
     line-height: 2rem;
+}
+
+/* Media queries */
+@media screen and (max-width: 998px) {
+    .container {
+        width: 100%;
+    }
+
+    .navbar {
+        padding: 1.5rem;
+    }
+    .nav_right ul {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+
 }
