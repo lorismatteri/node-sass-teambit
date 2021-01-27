@@ -146,4 +146,23 @@ body {
   border: 1px solid #2C4792;
   border-radius: 1rem;
 }
+
+/*** Footer ***/
+#site_footer ul {
+  list-style: none;
+}
+
+.col.flex {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.col {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+}
+
+#site_footer ul li {
+  line-height: 2rem;
+}
 /*# sourceMappingURL=app.css.map */

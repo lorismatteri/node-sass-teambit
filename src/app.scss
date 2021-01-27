@@ -123,3 +123,20 @@ body {
    border: 1px solid #2C4792;
    border-radius: 1rem;
 }
+
+/*** Footer ***/
+#site_footer ul {
+    list-style: none;
+}
+
+.col.flex {
+    flex-basis: 25%;
+}
+
+.col {
+    flex-basis:  15%;
+}
+
+#site_footer ul li {
+    line-height: 2rem;
+}
