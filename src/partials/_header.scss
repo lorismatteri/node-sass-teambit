@@ -47,7 +47,7 @@
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: $bg_bisque;
+    background-color: $bg_main;
     text-align: right;
     padding: 1rem;
     ul {
@@ -92,7 +92,7 @@
     }
     button {
         @include btn;
-        @include btn_blue;
+        @include btn_full;
         img {
             width: 10%;
             vertical-align: middle;

@@ -79,7 +79,7 @@ body {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: bisque;
+  background-color: #93C7D0;
   text-align: right;
   padding: 1rem;
 }
@@ -141,7 +141,8 @@ body {
   border-radius: 5px;
   font-weight: bold;
   max-width: 15%;
-  background-color: #2C4792;
+  background-color: #922C2C;
+  border: 1px solid #922C2C;
   color: white;
   max-width: 30%;
 }
@@ -185,7 +186,7 @@ body {
 /*** Main ***/
 /* Comparison */
 #comparison {
-  background-color: bisque;
+  background-color: #93C7D0;
 }
 
 #comparison h3 {
@@ -292,7 +293,7 @@ body {
 
 /* Get Started */
 #get_started {
-  background-color: bisque;
+  background-color: #93C7D0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

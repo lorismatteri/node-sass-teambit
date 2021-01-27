@@ -9,8 +9,9 @@
     max-width: 15%;
 }
 
-@mixin btn_blue {
-    background-color: $sec_color;
+@mixin btn_full {
+    background-color: $btn_color;
+    border: 1px solid $btn_color;
     color: white;
     max-width: 30%;
 }
