@@ -27,8 +27,7 @@
                     vertical-align: middle;
                 }
                 a {
-                    color: $sec_color;
-                    text-decoration: none;
+                    @include link_blue;
                 }
             }
         }
@@ -73,7 +72,7 @@
 /* Banner */
 #banner {
     div.container {
-        padding: 2.5rem 0;
+        padding: 4rem 0;
     }
 }
 
@@ -89,9 +88,7 @@
         font-weight: 500;
     }
     p:not(.p_small) {
-        padding: 1rem 0;
-        font-size: 2.25rem;
-        line-height: 1.5;
+        @include normal_p
     }
     button {
         @include btn;

@@ -14,3 +14,14 @@
     color: white;
     max-width: 30%;
 }
+
+@mixin link_blue {
+    color: $sec_color;
+    text-decoration: none;
+}
+
+@mixin normal_p {
+    padding: 1rem 0;
+    font-size: 2.25rem;
+    line-height: 1.5;
+}
